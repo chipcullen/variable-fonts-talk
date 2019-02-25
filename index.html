@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Variable Fonts</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,68 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Variable Fonts</h1>
+					<h2>What they are, <br />and why they matter to PBS</h2>
+				</section>
+				<section>
+					<h1>Typography Today</h1>
+				</section>
+				<section>
+					<h1>Type variation</h1>
+					<h2>Is a <em>fundamental</em></h2>
+					<h4>tool of visual design.</h4>
+					<p style="max-width: 30vw; margin: 0 auto;"><small>It is what allows designers to manage visual emphasis of written content.</small></p>
+				</section>
+				<section>
+					<h2>Cost</h2>
+					<p class="fragment">File weight</p>
+					<p class="fragment">File requests</p>
+					<aside class="notes">
+						woff 2 has helped a lot with file size
+					</aside>
+				</section>
+				<section>
+					<h2 style="font-weight: 900;">Want a bold?</h2>
+					<p class="fragment">That's another file.</p>
+					<h2 class="fragment" style="font-weight: 200;">Want a light weight?</h2>
+					<p class="fragment">That's another file.</p>
+					<h2 class="fragment" style="font-style: italic;">Want an italic?</h2>
+					<p class="fragment">That's another file.</p>
+				</section>
+				<section>
+					<img src="./images/network-fonts.png" alt="A network stack showing font downloads">
+				</section>
+				<section>
+					<img src="./images/open-sans-selection.png" alt="Google Fonts showing a warning that all these font options will be slow.">
+				</section>
+				<section>
+					<img src="./images/64-crayons.jpg" alt="A box of crayons">
+				</section>
+				<section>
+					<img src="./images/melting-crayons.gif" alt="Melting crayons">
+				</section>
+
+				<section>
+					<h2>Enter:</h2>
+					<h1 class="fragment animate-weight">Variable Fonts</h1>
+				</section>
+
+				<section>
+					<h1>What is a <span class="animate-weight">variable</span> font?</h1>
+					<blockquote class="fragment">“a single font file that behaves like multiple fonts”.</blockquote>
+					<cite class="fragment"><a href="https://blog.typekit.com/2016/09/14/variable-fonts-a-new-kind-of-font-for-flexible-design/">https://blog.typekit.com/2016/09/14/variable-fonts-a-new-kind-of-font-for-flexible-design/</a></cite>
+				</section>
+
+				<section>
+					<img src="./images/typekit-announcement.png" alt="The Typekit Annoucement">
+				</section>
+
+				<section>
+					<h2>What does this mean?</h2>
+					<h1 class="fragment" style="font-weight: 900;">Multiple Weights…</h1>
+					<h2 class="fragment" style="font-weight: 200;">…one file</h2>
+				</section>
 			</div>
 		</div>
 
@@ -37,6 +97,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
