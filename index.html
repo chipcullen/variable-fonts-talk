@@ -26,7 +26,7 @@
 			<div class="slides">
 				<section>
 					<h1>Variable Fonts</h1>
-					<h2>What they are, <br />and why they matter to PBS</h2>
+					<h2>What they are, <br />and why they matter</h2>
 				</section>
 				<section>
 					<h1>Typography Today</h1>
@@ -53,6 +53,15 @@
 					<h2 class="fragment" style="font-style: italic;">Want an italic?</h2>
 					<p class="fragment">That's another file.</p>
 				</section>
+
+				<section>
+					<h2>On the web, font weights are usually expressed as numbers.</h2>
+					<p class="fragment" style="font-weight: 200;">light = 200</p>
+					<p class="fragment" style="font-weight: 400;">regular = 400</p>
+					<p class="fragment" style="font-weight: 700;">bold = 700</p>
+					<p class="fragment" style="font-weight: 900;">black = 900</p>
+				</section>
+
 				<section>
 					<img src="./images/network-fonts.png" alt="A network stack showing font downloads">
 				</section>
@@ -86,6 +95,138 @@
 					<h1 class="fragment" style="font-weight: 900;">Multiple Weights…</h1>
 					<h2 class="fragment" style="font-weight: 200;">…one file</h2>
 				</section>
+
+				<section>
+					<img src="./images/mind-blown.gif" alt="Mind Blown" width="200">
+				</section>
+
+				<section>
+					<h2>It does mean <em>variable</em>.</h2>
+					<h2 class="fragment" style="font-weight: 429;">Want a weight of 429?</h2>
+					<h2 class="fragment" style="font-weight: 832;">How about 832?</h2>
+					<h2 class="fragment" style="font-weight: 209;">209? Go for it.</h2>
+					<aside class="notes">
+						we are no longer shackled to the conventional weights. we have much more subtle control.
+					</aside>
+				</section>
+
+				<section>
+					<h1>How do you <em>use</em> a <br /><span class="animate-weight">Variable Font?</span></h1>
+				</section>
+
+				<section>
+					<p>(On the web)</p>
+					<pre><code data-trim data-noescape>
+						@font-face {
+							font-family: "Source Sans Pro";
+							font-weight: 200 900;
+							font-style: normal;
+							src: url("../../SourceSansVariable-Roman.ttf.woff2") format("woff2"),
+								url("../../SourceSansVariable-Roman.ttf.woff") format("woff"),
+								url("../../SourceSansVariable-Roman.ttf") format("truetype");
+						}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code data-trim>
+						@font-face {
+							...
+							font-weight: 200 900;
+							...
+						}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code data-trim>
+						h2 {
+						  font-weight: 600;
+						}
+					</code></pre>
+					<pre><code data-trim >
+						<h2 style="font-weight: 832;">How about 832?</h2>
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Browser support?</h1>
+					<img src="./images/caniuse.png" alt="CanIUse report on Variable Fonts" class="fragment">
+				</section>
+
+				<section>
+					<h1>IE11?</h1>
+					<img src="./images/IE11.png" alt="IE11 will still render" width="600" class="fragment">
+				</section>
+
+				<section>
+					<pre><code data-trim>
+						html {
+						  font-family: 'NonVariableFont', sans-serif;
+						}
+
+						@supports (font-variation-settings: normal) {
+						  // the browser will calculate which fonts to use
+						  // before downloading resources
+						  html {
+						    font-family: 'VariableFont', sans-serif;
+						  }
+						}
+					</code></pre>
+				</section>
+
+				<!-- <section>
+					<h1>What does this mean for PBS?</h1>
+				</section>
+
+				<section>
+					<h1>New PBS Typeface - “PBS Sans”</h1>
+					<h2 class="fragment">… will be <span class="animate-weight">variable</span></h2>
+        </section> -->
+
+        <section>
+          <h1 class="fragment">… one more thing …</h1>
+          <h2 class="fragment">… it’s not just <em>weights</em>…</h2>
+          <h3 class="fragment">… it can be almost anything!</h3>
+        </section>
+
+        <section>
+					<img src="./images/soulcraft.gif" alt="Soulcraft">
+        </section>
+
+        <section>
+					<img src="./images/kicker.gif" alt="Kicker">
+        </section>
+
+        <section>
+					<img src="./images/mind-blown.gif" alt="Mind Blown" width="400">
+        </section>
+
+        <section>
+					<img src="./images/cheee.gif" alt="Cheee">
+        </section>
+
+        <section>
+					<img src="./images/pappardelle.gif" alt="Pappardelle">
+        </section>
+
+        <section>
+					<img src="./images/mind-blown.gif" alt="Mind Blown" width="800">
+        </section>
+
+        <section>
+          <h2>Resources</h2>
+          <ul class="fragment">
+            <li><a href="https://v-fonts.com/">v-fonts.com</a></li>
+            <li><a href="https://github.com/adobe-fonts/source-sans-pro/releases/tag/2.040R-ro%2F1.090R-it">Source Sans Pro with Variable Font</a></li>
+            <li><a href="https://css-tricks.com/guides/opentype-variable-fonts/">CSS Tricks guide</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Thank you!</h1>
+          <h2>(Questions?)</h2>
+        </section>
 			</div>
 		</div>
 
